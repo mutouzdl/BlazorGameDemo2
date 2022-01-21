@@ -1,0 +1,265 @@
+/* /Pages/Game/Fight/LetFight.razor.rz.scp.css */
+
+@keyframes cloud_map-b-51n5zzw5k1 {
+	0%{background: url('assets/map/cloud1.jpg');}
+	25%{background: url('assets/map/cloud2.jpg');}
+	50%{background: url('assets/map/cloud3.jpg');}
+	75%{background: url('assets/map/cloud4.jpg');}
+	100%{background: url('assets/map/cloud1.jpg');}
+}
+
+
+.bgDiv[b-51n5zzw5k1] {
+	width: 1200px;
+	height:600px;
+	margin: 5% auto 1% auto;
+	padding: 1%;
+	background: url('assets/map/cloud1.jpg');
+    animation: cloud_map-b-51n5zzw5k1 30s infinite;
+}
+
+.actor[b-51n5zzw5k1] {
+    width: 64px;
+    height: 64px;
+    margin: 50px auto;
+}
+
+@keyframes actorStand-b-51n5zzw5k1 {
+	0%{background-position:0px 0px;}
+    33%{background-position:-64px 0px;}
+    66%{background-position:-128px  0px;}
+	100%{background-position:0px 0px;}
+}
+
+.actorStand[b-51n5zzw5k1] {
+    animation: actorStand-b-51n5zzw5k1 1s step-start infinite;
+}
+
+@keyframes actorAttack-b-51n5zzw5k1 {
+    0%{background-position:-256px 0px;}
+	20%{background-position:-320px 0px;}
+	40%{background-position:-384px 0px;}
+	60%{background-position:-448px 0px;}
+	80%{background-position:-512px 0px;}
+	100%{background-position:-256px 0px;}
+}
+
+.actorAttack[b-51n5zzw5k1] {
+    animation: actorAttack-b-51n5zzw5k1 1s step-start infinite;
+}
+/* /Pages/Game/Fight/Map.razor.rz.scp.css */
+
+.bgDiv[b-5twul0xeuk] {
+    position: relative;
+    transform-origin: 0% 0%;
+    border: solid gray 1px;
+}
+
+.mapDiv[b-5twul0xeuk] {
+    background-color: black;
+    background-position-x: center;
+    background-image: url('assets/map/map1.jpg');
+    background-repeat:no-repeat;
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+.page[b-1y400mltsn] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-1y400mltsn] {
+    flex: 1;
+}
+
+.sidebar[b-1y400mltsn] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-1y400mltsn] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-1y400mltsn]  a, .top-row[b-1y400mltsn]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-1y400mltsn]  a:hover, .top-row[b-1y400mltsn]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-1y400mltsn]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-1y400mltsn] {
+        display: none;
+    }
+
+    .top-row.auth[b-1y400mltsn] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-1y400mltsn]  a, .top-row[b-1y400mltsn]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-1y400mltsn] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-1y400mltsn] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-1y400mltsn] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-1y400mltsn]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-1y400mltsn], article[b-1y400mltsn] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* /Shared/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-2siwlbcnk6] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-2siwlbcnk6] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-2siwlbcnk6] {
+    font-size: 1.1rem;
+}
+
+.oi[b-2siwlbcnk6] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-2siwlbcnk6] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-2siwlbcnk6] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-2siwlbcnk6] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-2siwlbcnk6]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-2siwlbcnk6]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-2siwlbcnk6]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-2siwlbcnk6] {
+        display: none;
+    }
+
+    .collapse[b-2siwlbcnk6] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
+/* /WebComponents/Entity/Actor/Actor.razor.rz.scp.css */
+
+.actor[b-wha5n998lz] {
+    width: 64px;
+    height: 64px;
+}
+
+@keyframes actorStand-b-wha5n998lz {
+	0%{background-position:0px 0px;}
+    33%{background-position:-64px 0px;}
+    66%{background-position:-128px  0px;}
+	100%{background-position:0px 0px;}
+}
+
+.actorStand[b-wha5n998lz] {
+    animation: actorStand-b-wha5n998lz 1s step-start infinite;
+}
+
+@keyframes actorAttack-b-wha5n998lz {
+    0%{background-position:-256px 0px;}
+	20%{background-position:-320px 0px;}
+	40%{background-position:-384px 0px;}
+	60%{background-position:-448px 0px;}
+	80%{background-position:-512px 0px;}
+	100%{background-position:-128px 0px;}
+}
+
+.actorAttack[b-wha5n998lz] {
+    animation: actorAttack-b-wha5n998lz 0.5s step-start 1;
+}
+
+@keyframes actorHurt-b-wha5n998lz {
+	0%{background-position:0px -128px;}
+    33%{background-position:-64px -128px;}
+    66%{background-position:-128px -128px;}
+	100%{background-position:0px -128px;}
+}
+
+.actorHurt[b-wha5n998lz] {
+    animation-name: actorHurt-b-wha5n998lz;
+    animation-duration: 0.3s;
+    animation-timing-function: step-start;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes actorDead-b-wha5n998lz {
+	0%{background-position:0px -320px;}
+    33%{background-position:-384px -320px;}
+	66%{background-position:448px -320px;}
+	100%{background-position:512px -320px;}
+}
+
+.actorDead[b-wha5n998lz] {
+    animation: actorDead-b-wha5n998lz 0.2s step-start;
+    animation-fill-mode: forwards;
+}
